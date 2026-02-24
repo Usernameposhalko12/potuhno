@@ -1,0 +1,294 @@
+/* 🌟 GLOBAL — GOLD CASINO THEME */
+body {
+  background:
+    radial-gradient(circle at 50% -40%, #fff6c7 0%, #1a1a1a 85%),
+    repeating-radial-gradient(circle at 20% 30%, rgba(255,215,0,0.05) 0 60px, transparent 60px 140px),
+    repeating-radial-gradient(circle at 80% 70%, rgba(255,223,100,0.04) 0 80px, transparent 80px 180px);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: #fff9e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+/* ✨ GOLD OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("gold-pattern.png"); /* optional */
+  background-size: 420px;
+  background-repeat: repeat;
+  opacity: 0.06;
+  pointer-events: none;
+  animation: goldFloat 120s linear infinite;
+}
+
+@keyframes goldFloat {
+  from { background-position: 0 0; }
+  to { background-position: 2000px 1500px; }
+}
+
+/* 🌟 HEADER */
+#logo-container {
+  text-align: center;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.55);
+  border-bottom: 2px solid rgba(255,223,0,0.5);
+}
+
+#logo {
+  max-width: 260px;
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(255,223,0,0.8));
+}
+
+/* 🏛 MAIN PANEL */
+#app {
+  max-width: 920px;
+  margin: 28px auto;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(255,240,180,0.92), rgba(200,180,80,0.9));
+  border-radius: 22px;
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 35px rgba(180,150,30,0.6);
+  backdrop-filter: blur(12px);
+  color: #1a1400;
+}
+
+/* HEADERS */
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #4b3000;
+  text-shadow: 0 0 12px rgba(255,215,0,0.7);
+}
+
+/* ✨ BUTTONS */
+button {
+  background: linear-gradient(45deg, #ffd700, #ffcc00);
+  border: none;
+  padding: 11px 24px;
+  margin: 5px 0;
+  border-radius: 18px;
+  cursor: pointer;
+  color: #1a1400;
+  font-weight: bold;
+  box-shadow: 0 4px 0 #b8860b, 0 0 18px rgba(255,215,0,0.6);
+  transition: 0.25s ease;
+  position: relative;
+}
+
+button::after {
+  content: "⭐";
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 7px 0 #d4af37, 0 0 26px rgba(255,223,0,0.9);
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 7px 0 15px 0;
+  border-radius: 12px;
+  border: 2px solid #d4af37;
+  background: #fff8dc;
+  font-weight: bold;
+  color: #1a1400;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 12px rgba(255,215,0,0.9);
+}
+
+/* 🎒 INVENTORY */
+.inventory-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.inv-card {
+  width: 170px;
+  background: linear-gradient(180deg, #fff8dc, #ffef9c);
+  border: 2px solid #d4af37;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(200,160,30,0.6);
+  position: relative;
+  color: #1a1400;
+}
+
+/* 🎖️ RARITY */
+.rarity-badge {
+  margin-top: 6px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  background: #b8860b;
+}
+
+.quality-badge {
+  margin-top: 4px;
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  background: #ffd700;
+}
+
+/* 🔒 LOCK */
+.inv-locked::after {
+  content: "🔒 ЗАБЛОКОВАНО";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  background: rgba(180,50,0,0.95);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 4px;
+  font-size: 13px;
+  box-shadow: 0 0 12px rgba(140,0,0,0.6);
+}
+
+/* 🎁 CASES */
+.case-container img {
+  width: 150px;
+  user-select: none;
+  border-radius: 24px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 0 30px rgba(255,215,0,0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.case-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 45px rgba(255,223,0,1);
+}
+
+.case-price {
+  font-weight: bold;
+  color: #4b3000;
+  margin-top: 5px;
+  text-shadow: 0 0 6px rgba(255,215,0,0.8);
+}
+
+/* 💬 ALERTS */
+.alert {
+  background: linear-gradient(180deg, #fff7d4, #ffef9c);
+  border: 2px dashed #d4af37;
+  padding: 9px;
+  border-radius: 20px;
+  margin: 10px auto;
+  max-width: 420px;
+  text-align: center;
+  color: #1a1400;
+  font-weight: bold;
+  box-shadow: 0 0 16px rgba(255,215,0,0.7);
+}
+
+.alert::before {
+  content: "💰 ";
+}
+
+/* 🌟 FLOATING GOLD LEAVES */
+@keyframes goldFall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+.leaf {
+  position: fixed;
+  top: -10px;
+  color: #ffd700;
+  font-size: 18px;
+  user-select: none;
+  pointer-events: none;
+  animation: goldFall linear infinite;
+  z-index: 9999;
+}
+
+/* PIXEL */
+.pixel {
+  width: 512px;
+  height: 512px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* 🌟 SEED SELECTOR */
+#seedSelector {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1400;
+  border: 3px solid #ffd700;
+  padding: 15px;
+  color: #fff;
+  z-index: 9999;
+  width: 300px;
+  max-height: 70vh;
+  display: none;
+  border-radius: 16px;
+}
+
+#seedOptions {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#seedOptions button {
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+  padding: 8px 12px;
+  background: linear-gradient(45deg, #ffd700, #ffcc00);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🎚️ LEVEL MENU */
+.level-menu {
+  max-width: 420px;
+  margin: auto;
+  background: linear-gradient(180deg, #4b3000, #1a1400);
+  color: #fff9d0;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(255,215,0,0.3);
+}
+
+.level-menu button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* TEXT COLORS */
+.penalty { color: #ff7777; }
+.freeze { color: #88cfff; margin-top: 10px; }

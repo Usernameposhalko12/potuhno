@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>NICUS CASE ULTRA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      font-family: sans-serif;
+    }
+
+    #logo-container {
+      text-align: center;
+      padding: 20px 0 10px;
+    }
+
+    #logo {
+      width: 280px;
+      max-width: 100%;
+    }
+
+    .yellow-line {
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(to right, gold, #ffcc00, gold);
+      box-shadow: 0 0 10px gold;
+    }
+
+    #app {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="logo-container">
+    <img src="img/logo.png" alt="NICUS CASE ULTRA" id="logo" />
+  </div>
+  <div class="yellow-line"></div>
+  <div id="app"></div>
+
+<body>
+ <!-- Вибір насіння -->
+<div id="seedSelector" class="modal">
+  <div class="box">
+    <h3>🌱 Вибери насіння</h3>
+    <div id="seedOptions"></div>
+    <br>
+    <button onclick="closeSeedSelector()">❌ Закрити</button>
+  </div>
+</div>
+
+<!-- Дії з рослиною -->
+<div id="plantActions" class="modal">
+  <div class="box"></div>
+</div>
+
+<body>
+<!-- QR-сканер -->
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+
+  <!-- Графіки -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Головний файл (ОДИН РАЗ) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
